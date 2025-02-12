@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Bhbaty | Portfolio</title>
+    <meta name="description" content="Ahmed Bhbaty - Data Science Specialist. Transforming raw data into strategic insights.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* تصميم العنوان في الصفحة الرئيسية */
+        .portfolio-title {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4A90E2;
+        }
+        
+        /* تصميم مجموعة الأزرار في الصفحة الرئيسية */
+        .cta-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* تصميم زر الدعوة للعمل */
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* تصميم الزر الرئيسي */
+        .cta-btn.primary {
+            background: linear-gradient(90deg, #4A90E2, #0066FF);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* تأثير hover على الزر الرئيسي */
+        .cta-btn.primary:hover {
+            background: linear-gradient(90deg, #0066FF, #4A90E2);
+        }
+
+        /* تصميم الزر الثانوي */
+        .cta-btn.secondary {
+            background: linear-gradient(90deg, #3B68FF, #2600FF);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* تأثير hover على الزر الثانوي */
+        .cta-btn.secondary:hover {
+            background: linear-gradient(90deg, #2600FF, #3B68FF);
+        }
+
+        /* تصميم أيقونات الأزرار */
+        .cta-btn i {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- عنوان القسم في الصفحة الرئيسية -->
+    <div class="portfolio-title">Portfolio.</div>
+
+    <!-- قائمة التنقل العائمة -->
+    <nav class="floating-nav">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- قسم البطل (Hero Section) -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h4 class="hero-subtitle">Data Science Specialist</h4>
+                <h1 class="hero-title">Ahmed Bhbaty</h1>
+                <p class="hero-description"></p>
+
+                <!-- مجموعة الأزرار في قسم البطل -->
+                <div class="cta-group">
+                    <!-- زر تحميل السيرة الذاتية -->
+                    <a href="cv.pdf" download class="cta-btn primary">
+                        Download CV <i class="fas fa-download"></i>
+                    </a>
+                    <!-- زر للتواصل -->
+                    <a href="#contact" class="cta-btn secondary">
+                        Let's Talk <i class="fas fa-comment-dots"></i>
+                    </a>
+                </div>
+
+                <!-- روابط التواصل الاجتماعي -->
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ahmed-elbhbaty/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@ahmedelbhbaty99" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/ahmedelbhbaty" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/priv_ahmed_elbhbaty/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="profile.png" alt="Ahmed Bhbaty">
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم "عنّي" -->
+    <section class="about-me" id="about">
+        <h2>About Me</h2>
+        <p>I specialize in leveraging advanced machine learning techniques to uncover patterns and trends that empower businesses and organizations.</p>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service" onclick="showServiceDetails(1)">
+                <h3>Data Analysis & Cleaning</h3>
+                <p>Ensure data quality and analyze trends</p>
+            </div>
+            <div class="service" onclick="showServiceDetails(2)">
+                <h3>Predictive AI Models</h3>
+                <p>Develop AI models to predict trends</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المشاريع -->
+    <section class="projects" id="projects">
+        <h2>Our Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <a href="project1.html" class="project-link"></a>
+                <div class="project-content">
+                    <h3>Uber Trips Analysis</h3>
+                    <p>Analyzing transportation patterns</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <a href="project2.html" class="project-link"></a>
+                <div class="project-content">
+                    <h3>WhatsApp Chat Analysis</h3>
+                    <p>Social media insights extraction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الاتصال -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Type your message" required></textarea>
+            
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="social-links">
+            <a href="https://twitter.com" target="_blank"></a>
+            <a href="https://linkedin.com" target="_blank"></a>
+        </div>
+    </footer>
+
+    <!-- سكربتات JavaScript للتفاعل مع الأزرار والمحتوى -->
+    <script>
+        // تفاعل مع زر "Send Message"
+        document.querySelector('.btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // تفاعل الخدمات
+        function showServiceDetails(serviceId) {
+            const services = [
+                {title: 'Data Analysis', details: 'Detailed description...'},
+                {title: 'AI Models', details: 'Technical specifications...'}
+            ];
+            alert(services[serviceId-1].details);
+        }
+
+        // تفاعل المشاريع
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                if(e.target.tagName !== 'A') {
+                    window.location = card.querySelector('a').href;
+                }
+            });
+        });
+
+        // تأثير الكتابة في الصفحة الرئيسية
+        const typingElement = document.querySelector('.hero-description');
+        const texts = [
+            "Data Science & ML Engineer ",
+            "Converting raw data to a story ",
+            
+        
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            let currentText = texts[textIndex];
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, charIndex--);
+            } else {
+                typingElement.textContent = currentText.substring(0, charIndex++);
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(typeEffect, 500);
+            } else {
+                setTimeout(typeEffect, isDeleting ? 50 : 100);
+            }
+        }
+        typeEffect();
+    </script>
+</body>
+</html>
